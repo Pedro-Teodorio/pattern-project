@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
-export const InputContent = ({placeholder, type }) => {
-	
-
-	return <input type={type} placeholder={placeholder} className={`w-full rounded-lg px-2 py-0 bg-transparent outline-none text-neutral-50 placeholder-neutral-400 h-full `} />;
+export const InputContent = ({ placeholder, type, name }) => {
+	return <input type={type} name={name} placeholder={placeholder} className={`w-full px-2 bg-transparent outline-none  h-full placeholder:text-neutral-400`} />;
 };
 
 InputContent.propTypes = {
 	placeholder: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
 };
